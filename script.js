@@ -29,18 +29,8 @@ var createScene = function () {
             wall.position.x = wallx[i];
         }
     }
-
-    ball = BABYLON.MeshBuilder.CreateSphere("ball", {diameter:2, segments:32}, scene);
-    ball.position.set(0, 5, 0);
-    ball.physicsImpostor = new BABYLON.PhysicsImpostor(ball, BABYLON.PhysicsImpostor.MeshImpostor, {mass: 1, restitution:0.9}, scene);
     return scene;
 };
-
-setInterval(function() {
-    var box = BABYLON.MeshBuilder.CreateBox("box", {width:2, height:2, depth:2}, scene);
-    box.position.set(ball.position.x, 10, ball.position.z);
-    box.physicsImpostor = new BABYLON.PhysicsImpostor(box, BABYLON.PhysicsImpostor.MeshImpostor, {mass:1, restitution:0.9}, scene);
-}, 1000);
 
 const scene = createScene();
 
