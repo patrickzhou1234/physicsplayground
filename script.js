@@ -5,8 +5,8 @@ var createScene = function () {
     scene.collisionsEnabled = true;
     scene.enablePhysics(new BABYLON.Vector3(0,-9.81, 0), new BABYLON.AmmoJSPlugin);
     
-    var camera = new BABYLON.ArcRotateCamera("Camera", 0, 3, 30, new BABYLON.Vector3(0, 0, 0), scene);
-    camera.setPosition(new BABYLON.Vector3(0, 3, -30));
+    var camera = new BABYLON.ArcRotateCamera("Camera", 0, 10, 30, new BABYLON.Vector3(0, 0, 0), scene);
+    camera.setPosition(new BABYLON.Vector3(0, 20, -30));
     camera.attachControl(canvas, true);
 
     var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
